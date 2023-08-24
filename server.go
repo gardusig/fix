@@ -16,8 +16,8 @@ type Server struct {
 	acceptor *quickfix.Acceptor
 }
 
-func NewServer(filepath string) (*Server, error) {
-	settings, err := internal.GetSettingsFromFile(filepath)
+func NewServer(settingsFilepath string) (*Server, error) {
+	settings, err := internal.GetSettingsFromFile(settingsFilepath)
 	if err != nil {
 		return nil, err
 	}

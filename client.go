@@ -16,8 +16,8 @@ type Client struct {
 	initiator *quickfix.Initiator
 }
 
-func NewClientFIX(filepath string) (*Client, error) {
-	settings, err := internal.GetSettingsFromFile(filepath)
+func NewClient(settingsFilepath string) (*Client, error) {
+	settings, err := internal.GetSettingsFromFile(settingsFilepath)
 	if err != nil {
 		return nil, err
 	}
